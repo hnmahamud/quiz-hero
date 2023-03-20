@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        common: ["Rubik", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Quiz and be amazed!
+                </p>
+            </div>
+            <button onclick="window.location.href='index.html'"
+                class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                Home
+            </button>
+        </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- Main -->
+    <main class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto">
+        <section class="flex flex-col space-y-4 mb-12">
+            <h1 class="text-3xl font-bold text-header1Color text-center my-8">BLOGS</h1>
+            <!-- Card 1 -->
+            <div class="bg-green-50 card card-side bg-base-100 border-2 rounded-sm p-4">
+                <div class="col-span-2 card-body">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-lg font-bold">Difference between map(), filter(), foreach() and find()?</h2>
+
+                        <p><strong>map():</strong> The map() method returns the newly created array according to the
+                            provided callback function. It returns a new array with the same length as the original
+                            array. It does not change the original array.</p>
+
+                        <p><strong>filter():</strong> The filter() method is used to filter all the elements. It
+                            searches through all the elements. It returns the element that matches and removes the
+                            element that does not match. The filter method does not change the original array.</p>
+
+                        <p><strong>forEach():</strong> The forEach() method does not returns a new array based on the
+                            given array. The forEach() method doesn't return anything hence the method chaining
+                            technique cannot be applied here. It is not executed for empty elements.</p>
+
+                        <p><strong>find():</strong> The find() method returns the value of the first element in the
+                            array that satisfies the provided testing function. It returns the value of the first
+                            element that satisfies the callback function. It does not modify the original array.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-green-50 card card-side bg-base-100 border-2 rounded-sm p-4">
+                <div class="col-span-2 card-body">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-lg font-bold">Difference between Local storage, Session Storage and Cookies?
+                        </h2>
+
+                        <p><strong>Local Storage:</strong> The storage capacity of local storage is 5MB/10MB. As it is
+                            not session-based, it must be deleted via javascript or manually. The client can only read
+                            local storage. There is no transfer of data to the server. There are fewer old browsers that
+                            support it.</p>
+
+                        <p><strong> Session Storage:</strong> The storage capacity of session storage is 5MB. It's
+                            session-based and works per window or tab. This means that data is stored only for the
+                            duration of a session, i.e., until the browser (or tab) is closed. The client can only read
+                            local storage. There is no transfer of data to the server. There are fewer old browsers that
+                            support it.</p>
+
+                        <p><strong>Cookies:</strong> The storage capacity of Cookies is 4KB. Cookies expire based on the
+                            setting and working per tab and window. Both clients and servers can read and write the
+                            cookies. Data transfer to the server is exist. It is supported by all the browser including
+                            older browser.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-green-50 card card-side bg-base-100 border-2 rounded-sm p-4">
+                <div class="col-span-2 card-body">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-lg font-bold">What is Event Loop, and how it works?</h2>
+
+                        <p>JavaScript is a single-threaded, non-blocking, asynchronous language that uses the concept of
+                            event loop to make it work asynchronously even if it is single-threaded. There are some
+                            functions in javascript which can run on the browser API instead of on V8. The functions or
+                            call which is not present on V8 are sent to the browser API and then work as a single thread
+                            as executed itself. After its execution, the resulting output is sent to the Event Queue.
+                            The Event Loop is responsible for sending functions results to the Stack for processing
+                            when it becomes empty.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-green-50 card card-side bg-base-100 border-2 rounded-sm p-4">
+                <div class="col-span-2 card-body">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-lg font-bold">What is the purpose of quizTimer() and chooseQuiz() function?</h2>
+
+                        <p><strong>quizTimer():</strong> The function takes a parameter name (dismiss). If no parameter is passed when calling the function, the function sets up an interval to run every second and update the timer. Inside the setInterval, the function calculates minutes and seconds, and updates the color every 60 seconds. If a boolean parameter name (true) is passed when calling the function, the timer should be dismissed. Then the function clears the interval for the timer and stops the timer.</p>
+
+                        <p><strong>chooseQuiz():</strong> The function takes two parameters name (index, givenAns). The function first checks if there is an existing answer in the answers array for the current question. If an existing answer is found, the function updates the answer with the new givenAns value and replacing the old answer. If no existing answer is found, the function adds a new answer. Then the function calls displayAnswers() to update the display of the answers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
